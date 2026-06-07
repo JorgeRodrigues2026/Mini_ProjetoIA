@@ -226,6 +226,10 @@ def segmentar_clientes(df: pd.DataFrame) -> pd.DataFrame:
     print(f"\nDistribuicao de segmentos:\n{clientes['segmento'].value_counts()}")
     return clientes
 
+'''Função para formatar valores monetários com separador de milhar "." e decimal "," '''
+def monetario (valor):
+    return f"{valor:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+
 
 def calcular_estatisticas_numpy(df: pd.DataFrame) -> dict[str, float]:
     """Calcula estatisticas com NumPy e demonstra broadcasting."""
@@ -249,7 +253,7 @@ def calcular_estatisticas_numpy(df: pd.DataFrame) -> dict[str, float]:
     }
 
     for chave, valor in estatisticas.items():
-        print(f"  {chave}: R$ {valor:.2f}" if "normalizada" not in chave else f"  {chave}: {valor:.4f}")
+        print(f"  {chave}: R$ {monetario(valor)}" if "normalizada" not in chave else f"  {chave}: {valor:.4f}")
 
     return {chave: float(valor) for chave, valor in estatisticas.items()}
 

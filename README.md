@@ -1,4 +1,6 @@
-# SalesInsight PY
+# Desenvolvedor(a) em IA para Análise Preditiva - Mini projeto avaliativo - Modulo I
+
+# SalesInsight PY: Pipeline de Análise e Visualização de Dados de Vendas
 
 Pipeline de analise e visualizacao de dados de vendas desenvolvido para o mini-projeto avaliativo do Modulo 1. O projeto le, limpa, transforma, analisa e visualiza um dataset de vendas, gerando metricas, segmentacao de clientes, projecao simples de tendencia e arquivos de saida em CSV, JSON e PNG.
 
